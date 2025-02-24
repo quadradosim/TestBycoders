@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.3.min.js"> </script>
+    </head>
+<body>
+    <form name="process">
+	
+		<fieldset>
+			<label for="urlService">Coloque a url do serviço que será utilizado</label>
+			<input type="text" id="urlService" placeholder="https://localhost:7234">  
+		</fieldset>
+		<fieldset>
+			<label for="upload">Selecione um arquivo:</label>
+			<input type="file" id="upload" onchange="previewFile();">  
+		<fieldset>
+
+        <h1>Fluxo de caixa por loja</h1>  
+		
+		<div id="financialMovementebyStore">
+		</div>
+    </form>
+</body>
+</html>
+<script>	
+	function previewFile()
+	{
+		if($('#urlService').val() != "")
+		{
+			let fileText = "";
+			var file = document.querySelector("input[type=file]").files;
+
+			let reader = new FileReader();
+
+			reader.addEventListener(
+				"load",
+				() => {
+				fileText = reader.result;
+				treatData(fileText);
+				},false,
+			);
+
+			if(file)
+		   reader.readAsText(file[0]);
+		}
+		else
+		{
+			$('#upload').val("");
+			alert('Primeiro coloque a url do serviço que será utilizado');
+		}
+        
+	}
+
+	function treatData(documentText)
+	{
+		//convert text into array
+		var arrayString = documentText.split('\n');	
+
+		//send data from file to back-end
+		$.ajax({
+			url: $('#urlService').val() + '/FinancialMovement',
+			data: JSON.stringify(arrayString), 
+			type: 'POST',
+			contentType: "application/json",
+			datatype:'json',
+			success: function(response)
+			{
+				//clean upload
+				$('#upload').val("");
+				//set financialMovements by store on screen
+				displayFinancialMovementbyStore(response);
+			}
+		 });
+	}
+	
+	function displayFinancialMovementbyStore(response)
+	{	
+		//control current store	
+		var lastName = "";
+		var total = 0;
+		
+		//set div empty
+		$('#financialMovementebyStore').empty();
+		
+		// show a list of operations by store and the financial balance
+		$(response).each(function(index, element) { 
+		
+			//first store name
+			if (lastName == "")
+			{
+				//save the first store name inside variable
+				lastName = element.name;
+				// write store name
+				$('#financialMovementebyStore').append('<h2>' + element.name + ': ' + '</h2>');
+			}
+		
+			//same store
+			if (element.name == lastName)
+			{	
+				//write description
+				$('#financialMovementebyStore').append(element.description + '<br>');
+				//sum total
+				total += parseInt(element.total);
+			}
+			//new store
+			else
+			{
+				//write the previous total value
+				$('#financialMovementebyStore').append('<br><p>Saldo R$ ' + total.toString() + ',00</p>');
+				
+				// write store name
+				$('#financialMovementebyStore').append('<h2>' + element.name + ': ' + '</h2>');
+				//write description
+				$('#financialMovementebyStore').append(element.description + '<br>');
+				//change the value of variable with right store name 
+				lastName = element.name;
+				//sum total
+				total = parseInt(element.total);
+			}
+			
+			if (index == response.length - 1)
+			{
+				//write the last total value
+				$('#financialMovementebyStore').append('<br><p>Saldo R$ ' + total.toString() + ',00</p>');
+			}
+			
+			index++;
+			
+		}); 
+	}
+
+</script>
