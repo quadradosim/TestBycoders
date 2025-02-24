@@ -8,10 +8,65 @@
     ".NETCoreApp,Version=v9.0": {
       "TesteBycoders/1.0.0": {
         "dependencies": {
-          "System.Data.SqlClient": "4.9.0"
+          "MSTest.TestFramework": "3.8.2",
+          "System.Data.SqlClient": "4.9.0",
+          "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
         },
         "runtime": {
           "TesteBycoders.dll": {}
+        }
+      },
+      "MSTest.Analyzers/3.8.2": {},
+      "MSTest.TestFramework/3.8.2": {
+        "dependencies": {
+          "MSTest.Analyzers": "3.8.2"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "3.800.225.11907"
+          }
+        },
+        "resources": {
+          "lib/net9.0/cs/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/de/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/es/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/it/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/pl/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/ru/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/tr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
+            "locale": "zh-Hant"
+          }
         }
       },
       "runtime.native.System.Data.SqlClient.sni/4.4.0": {
@@ -72,6 +127,14 @@
             "fileVersion": "4.900.24.56208"
           }
         }
+      },
+      "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
+        "runtime": {
+          "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "3.800.225.11907"
+          }
+        }
       }
     }
   },
@@ -80,6 +143,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MSTest.Analyzers/3.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ODWteXvnMEgCoZl1vAi2lOFIFFJSZkyQoQB9AFwBEUrzgJpy5J4ml3jLye4n85TA7gd+Qg2eWtqkvyEunB7B0g==",
+      "path": "mstest.analyzers/3.8.2",
+      "hashPath": "mstest.analyzers.3.8.2.nupkg.sha512"
+    },
+    "MSTest.TestFramework/3.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GE6TAA3yC6rYFZcUY7NprA4muVKtTCgoPwFPLu+Q0XgNjcIBa7C1O+hGT23mWwyiAyzVOH6G33pHsJS8mI2hqA==",
+      "path": "mstest.testframework/3.8.2",
+      "hashPath": "mstest.testframework.3.8.2.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.4.0": {
       "type": "package",
@@ -115,6 +192,11 @@
       "sha512": "sha512-j4KJO+vC62NyUtNHz854njEqXbT8OmAa5jb1nrGfYWBOcggyYUQE0w/snXeaCjdvkSKWuUD+hfvlbN8pTrJTXg==",
       "path": "system.data.sqlclient/4.9.0",
       "hashPath": "system.data.sqlclient.4.9.0.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

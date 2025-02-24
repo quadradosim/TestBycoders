@@ -5,9 +5,7 @@ VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteBycoders", "TesteBycoders.csproj", "{92126577-652B-461E-9A6A-2EB7518D51F2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "..\TestProject1\TestProject1.csproj", "{A69DF3F9-D475-454C-98B9-515D61541358}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "..\..\..\source\repos\TestProject1\TestProject1.csproj", "{06E690CE-10C3-FEAF-CCBB-7BFD48B4AA1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,16 +17,13 @@ Global
 		{92126577-652B-461E-9A6A-2EB7518D51F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92126577-652B-461E-9A6A-2EB7518D51F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92126577-652B-461E-9A6A-2EB7518D51F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A69DF3F9-D475-454C-98B9-515D61541358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A69DF3F9-D475-454C-98B9-515D61541358}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A69DF3F9-D475-454C-98B9-515D61541358}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A69DF3F9-D475-454C-98B9-515D61541358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E690CE-10C3-FEAF-CCBB-7BFD48B4AA1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E690CE-10C3-FEAF-CCBB-7BFD48B4AA1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E690CE-10C3-FEAF-CCBB-7BFD48B4AA1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E690CE-10C3-FEAF-CCBB-7BFD48B4AA1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{A69DF3F9-D475-454C-98B9-515D61541358} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9A770B21-A43C-46A5-A809-6A728EE40657}
