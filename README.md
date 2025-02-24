@@ -18,7 +18,7 @@ Para rodar a API .NET 9.0 existem duas opções:
 
 	2 - clicar duas vezes no arquivo sln na pasta raiz do projeto, que assim automaticamente a aplicação será aberta no visual studio. 
 	Basta rodar o projeto na versão http, clicando no triangulo verde no topo da página dentro do visual studio. Na página Web existe um campo na tela onde deve ser 
-	inserida a url base da API que foi rodada, a qual se está descrita no prompt da API. Existe também um arquivo de teste na API que pode ser rodado diretamente para
+	inserida a url base da API que foi rodada, a qual está descrita no prompt da API. Existe também um arquivo de teste na API que pode ser rodado diretamente para
 	rodar o teste.
 
 É necessário alterar aqui o arquivo appsettings.json em DefaultConnection, para inserir a string de conexão correta para o banco de dados. na base do projeto existe
